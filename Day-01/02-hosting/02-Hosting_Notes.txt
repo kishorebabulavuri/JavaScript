@@ -1,0 +1,91 @@
+JavaScript Hoisting: Notes
+1. What is Hoisting
+Hoisting is the behavior in JavaScript where variable and function declarations are moved to the top of their respective scopes during the compilation phase. This means you can use variables and functions before they are declared in the code.
+
+2. Features of Hoisting
+
+Declarations are Hoisted: Only declarations, not initializations.
+Function Calls: Functions can be called before their declaration.
+Memory Allocation: JavaScript allocates memory for variables and functions before code execution.
+Undeclared Variables: Assigned values to undeclared variables create global variables.
+3. Variable Lifecycle
+
+Declaration: let a;
+Assignment: a = 100;
+Usage: console.log(a);
+Can be done simultaneously: let a = 100;
+Note: JavaScript declares variables first, then initializes them.
+4. Examples of JavaScript Hoisting
+
+a. Global Scope
+
+        function codeHoist() {
+            a = 10;
+            let b = 50;
+        }
+        codeHoist();
+
+        console.log(a); // 10
+        console.log(b); // ReferenceError: b is not defined
+
+
+Explanation: Variables declared with var are hoisted and accessible, but let and const are not.
+
+b. Hoisting with var
+
+console.log(name); // undefined
+var name = 'Mukul Latiyan';
+
+Explanation: var declarations are hoisted but not initialized. The code is interpreted as:
+
+var name;
+console.log(name); // undefined
+name = 'Mukul Latiyan';
+
+
+c. Function Scoped Variable
+
+function fun() {
+  console.log(name);
+  let name = 'Mukul Latiyan';
+}
+fun(); // undefined
+
+Explanation: let is block-scoped. Declare and initialize variables before using them to avoid errors.
+
+d. Hoisting with let
+
+console.log(name); // ReferenceError: name is not defined
+let name = 'Mukul Latiyan';
+
+Explanation: let and const are block-scoped and must be declared before use.
+
+e. Hoisting with const
+
+fun(); // Function is hoisted
+
+function fun() {
+  console.log("Function is hoisted");
+}
+
+Explanation: Function declarations are hoisted, but function expressions are not.
+
+f. Hoisting with Function Expressions
+
+fun(); // ReferenceError: Cannot access 'fun' before initialization
+
+let fun = () => {
+  let name = 'Mukul Latiyan';
+  console.log(name);
+}
+
+Explanation: Function expressions with let or const are not hoisted. Use var for hoisting.
+5. Key Takeaways
+
+Declarations are hoisted; initializations are not.
+Function declarations are hoisted and can be called before their definition.
+var is function-scoped and hoisted, let and const are block-scoped and throw errors if accessed before declaration.
+
+for more deep
+
+https://medium.com/@kishore_lavuri/understanding-hosting-in-javascript-a-comprehensive-guide-69db37718ee5

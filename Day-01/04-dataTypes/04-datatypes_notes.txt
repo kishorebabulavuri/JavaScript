@@ -1,0 +1,190 @@
+1. Primitive Data Types
+Primitive data types are the most basic types of data. They are predefined by the programming language and store simple values.
+
+✅ Characteristics:
+
+Directly store values
+Fixed memory size
+Immutable (in some languages)
+
+2. Non-Primitive (Reference) Data Types
+Non-primitive data types are more complex and can store multiple values. They are derived from primitive types.
+
+✅ Characteristics:
+
+Can store multiple values
+Variable memory size
+Passed by reference (memory location is stored, not the actual value)
+
+
+Primitive Types:
+
+Number: Represents both integer and floating-point numbers. E.g., 42, 3.14
+String: Represents a sequence of characters. E.g., "Hello", 'World'
+Boolean: Represents true or false. E.g., true, false
+Undefined: Represents a variable that has been declared but not yet assigned a value.
+Null: Represents a deliberate non-value. E.g., null
+Symbol: Represents a unique and immutable value primarily used as object property keys. E.g., Symbol('description')
+BigInt: Represents integers with arbitrary precision. E.g., 1234567890123456789012345678901234567890n
+
+Primitive Types  
+
+1. Number
+Description: Represents both integer and floating-point numbers.
+
+Code Example:
+
+let age = 30; // integer
+let temperature = 98.6; // floating-point number
+
+
+Explanation:
+
+Numbers can be used for arithmetic operations and are stored as double-precision 64-bit floating-point values according to the IEEE 754 standard.
+Do's:
+
+Use numbers for calculations and mathematical operations.
+Use built-in methods like toFixed() for formatting numbers.
+Don'ts:
+
+Avoid using floating-point numbers for precise calculations, like currency, due to potential rounding issues.
+
+
+2. String
+Description: Represents a sequence of characters enclosed in quotes.
+
+Code Example:
+
+let greeting = "Hello, World!";
+let name = 'Alice';
+
+
+Explanation:
+
+Strings can be enclosed in single quotes ('), double quotes ("), or backticks (`) for template literals.
+Do's:
+
+Use string methods like toUpperCase(), toLowerCase(), and concat() to manipulate strings.
+Use template literals for multi-line strings and embedded expressions.
+Don'ts:
+
+Avoid using string concatenation with + for complex strings; prefer template literals for better readability.
+
+
+3. Boolean
+Description: Represents a value that is either true or false.
+
+Code Example:
+
+let isOnline = true;
+let hasAccess = false;
+
+
+Explanation:
+
+Booleans are typically used in conditional statements and logical operations.
+Do's:
+
+Use boolean values to control flow with if, while, and other conditional constructs.
+Don'ts:
+
+Avoid using booleans for non-boolean values; use appropriate types for clearer code.
+
+4. Undefined
+Description: Represents a variable that has been declared but not assigned a value.
+
+Code Example:
+
+let result;
+console.log(result); // undefined
+Explanation:
+
+A variable that is declared but not initialized has the value undefined.
+Do's:
+
+Use undefined to check if a variable has been initialized.
+Don'ts:
+
+Avoid manually assigning undefined to variables; it can lead to confusion. Use null if you need to indicate intentional absence of value.
+
+5. Null
+Description: Represents a deliberate non-value.
+
+Code Example:
+
+let user = null;
+Explanation:
+
+null is often used to represent an empty or non-existent value.
+Do's:
+
+Use null to indicate that a variable intentionally has no value.
+Don'ts:
+
+Don’t use null interchangeably with undefined; use them for their specific purposes.
+
+6. Symbol
+Description: Represents a unique and immutable value primarily used as object property keys.
+
+Code Example:
+
+const uniqueId = Symbol('id');
+Explanation:
+
+Symbols are used to create unique property keys for objects, ensuring that property keys don't collide.
+Do's:
+
+Use symbols when you need unique keys for object properties.
+Don'ts:
+
+Avoid using symbols for general purpose values, as they are intended for unique identification.
+
+7. BigInt
+Description: Represents integers with arbitrary precision.
+
+Code Example:
+
+const bigNumber = 1234567890123456789012345678901234567890n;
+Explanation:
+
+BigInt allows for the representation and manipulation of very large integers beyond the limits of the Number type.
+Do's:
+
+Use BigInt for calculations requiring large integer values.
+Don'ts:
+
+Don’t mix BigInt with Number in operations, as it can lead to errors.
+
+
+
+Non-Primitive Type
+
+
+01. Object
+
+
+Description: Represents a collection of key-value pairs, where each key is a string (or Symbol) and the value can be any data type.
+
+Code Example:
+
+let person = {
+    name: "Alice",
+    age: 30,
+    isStudent: false
+};
+Explanation:
+
+Objects are used to store multiple values in a single variable and can represent more complex data structures. They can also have methods (functions) associated with them.
+Do's:
+
+Use objects to group related data and functions together.
+Access and modify object properties using dot notation (person.name) or bracket notation (person['name']).
+Don'ts:
+
+Avoid using objects for primitive value storage; prefer primitive types when you don't need complex structures.
+Be cautious with object mutation, as it can lead to unexpected side effects.
+
+
+for more on datatypes
+
+https://medium.com/@kishore_lavuri/understanding-javascript-data-types-a-comprehensive-guide-ef2d7b582821

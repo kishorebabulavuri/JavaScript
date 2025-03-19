@@ -1,0 +1,77 @@
+1️⃣ Introduction to JavaScript
+JavaScript is a high-level, dynamically typed programming language.
+It is used for web development, both client-side (browser) and server-side (Node.js).
+Integrates seamlessly with HTML & CSS and has a rich standard library.
+
+2️⃣ JavaScript Features
+✅ Single-threaded: Executes one task at a time.
+✅ Interpreted & Compiled: Runs line-by-line but optimizes using JIT compilation.
+✅ Dynamically Typed: Variable types are determined at runtime.
+✅ Event-Driven & Asynchronous: Can handle events like clicks & AJAX requests.
+✅ Cross-platform: Works on browsers, servers, and even smart devices.
+
+3️⃣ Hello World Program
+📌 In Browser Console
+
+<html>
+<head></head>
+<body>
+    <h1>Check the console for the message!</h1>
+    <script>
+        console.log("Hello, World!");
+    </script>
+</body>
+</html>
+
+
+🔹 <script> tag embeds JavaScript into an HTML file.
+🔹 console.log() prints messages in the browser’s developer console.
+
+4️⃣ 📌 In Server Console (Node.js)
+
+// This is a single-line comment
+/* This is a multi-line comment */
+console.log("Hello, World!"); // Prints message in terminal
+
+🔹 Run the script using node index.js.
+
+5️⃣ Programming Paradigms in JavaScript
+✅ Imperative Programming: Focuses on how a task is done (e.g., loops, conditions).
+✅ Declarative Programming: Focuses on what should be done (e.g., functional programming).
+
+6️⃣ Client-Side vs. Server-Side JavaScript
+
+Feature	    Client-Side (Browser)	                        Server-Side (Node.js)
+Runs        On	Web Browser	                                Server
+Use Case	DOM manipulation, user interaction	            Database operations, API development
+Frameworks	React.js, Angular, Vue.js	                    Node.js, Express.js
+
+7️⃣Applications of JavaScript
+✅ Web Development: Makes websites interactive.
+✅ Web Applications: Used in modern web apps like Gmail, Google Maps.
+✅ Server-Side Development: Powers backend using Node.js.
+✅ Game Development: Creates browser-based games.
+✅ IoT & Smart Devices: JavaScript works on wearables like Pebble.
+
+8️⃣Limitations of JavaScript
+❌ Security Risks: Vulnerable to XSS attacks.
+❌ Performance Issues: Slower than compiled languages like C++.
+❌ Weak Typing: No strict type enforcement, leading to bugs.
+
+
+9️⃣Why JavaScript is a Lightweight Language?
+Minimal CPU usage
+Simple syntax (inspired by Java & C++)
+Faster execution in browsers
+
+
+
+🔟Is JavaScript Compiled or Interpreted?
+✅ Both!
+Interpreted: Executes line-by-line initially.
+
+Just-In-Time (JIT) Compilation (V8 Engine):
+
+Identifies frequently executed code (hot code).
+
+Compiles it into optimized machine code for better performance.

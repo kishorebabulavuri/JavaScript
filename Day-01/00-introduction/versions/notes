@@ -1,0 +1,109 @@
+JavaScript Versions & History
+JavaScript has evolved over time with new features and improvements introduced in different versions. The versions are standardized by ECMAScript (ES).
+
+1. Initial JavaScript Versions
+1995: JavaScript was created by Brendan Eich at Netscape.
+
+1997 (ES1): First standardized version of JavaScript by ECMA International.
+
+1998 (ES2): Minor improvements and standardization.
+
+1999 (ES3): Introduced regular expressions, try/catch for error handling, and improved string handling.
+
+2. ECMAScript 5 (ES5) - 2009
+Strict Mode ("use strict") for better error handling.
+
+JSON support (JSON.parse() & JSON.stringify()).
+
+Object.defineProperty() for property manipulation.
+
+Array methods: map(), filter(), reduce(), forEach().
+
+bind() method for function binding.
+
+3. ECMAScript 6 (ES6) - 2015 (Major Update)
+let & const for block-scoped variables.
+
+Arrow Functions (=>) for concise function syntax.
+
+Template Literals using backticks (`Hello ${name}`).
+
+Destructuring Assignment (const {x, y} = obj;).
+
+Default Parameters in functions (function greet(name="Guest")).
+
+Spread & Rest Operator (...) for array/object manipulation.
+
+Promises (Promise.then().catch()) for async operations.
+
+Classes (class MyClass {}) for object-oriented programming.
+
+Modules (import/export) for modular code structure.
+
+4. ECMAScript 7 (ES7) - 2016
+Array.prototype.includes() to check if a value exists in an array.
+
+Exponentiation Operator (**) as a shorthand for Math.pow().
+
+5. ECMAScript 8 (ES8) - 2017
+async/await for better asynchronous handling.
+
+Object.entries() & Object.values() for easier object iteration.
+
+String padding (padStart(), padEnd()) for string formatting.
+
+6. ECMAScript 9 (ES9) - 2018
+Rest/Spread properties ({...obj}) for object copying.
+
+Promise.finally() to handle final execution after a promise.
+
+7. ECMAScript 10 (ES10) - 2019
+Array.prototype.flat() to flatten nested arrays.
+
+Object.fromEntries() to convert key-value pairs to objects.
+
+Optional Catch Binding (catch {}) without requiring an error parameter.
+
+8. ECMAScript 11 (ES11) - 2020
+BigInt for handling large numbers (123n).
+
+Optional Chaining (?.) to safely access nested properties.
+
+Nullish Coalescing (??) to provide default values only for null/undefined.
+
+9. ECMAScript 12 (ES12) - 2021
+String.replaceAll() for replacing all occurrences.
+
+Logical Assignment Operators (&&=, ||=, ??=) for cleaner code.
+
+10. ECMAScript 13 (ES13) - 2022
+Top-Level Await in modules (await fetchData()).
+
+Object.hasOwn() for checking object properties.
+
+11. ECMAScript 14 (ES14) - 2023
+Array findLast() & findLastIndex() for easier array searching.
+
+Set methods (set.union(), set.intersection()) for working with sets.
+
+Conclusion
+ES6 (2015) is the most important update.
+
+Newer versions focus on performance, readability, and async handling.
+
+Understanding these versions helps in writing modern, efficient JavaScript.
+
+Version	    Year	        Key Features
+ES1	        1997	        First standardized version.
+ES2	        1998	        Minor improvements and      standardization.
+ES3	        1999	        Added regular expressions, try/catch, improved string handling.
+ES5	        2009	        "use strict", JSON support, map(), filter(), reduce(), bind().
+ES6	        2015	        let & const, Arrow functions, Classes, Template literals, Destructuring, Promises, Modules (import/export).
+ES7	        2016	        Array.prototype.includes(), Exponentiation operator (**).
+ES8	        2017	        async/await, Object.entries(), Object.values(), padStart(), padEnd().
+ES9	        2018	        Rest/Spread properties ({...obj}), Promise.finally().
+ES10	    2019	        Array.flat(), Object.fromEntries(), Optional Catch Binding (catch {}).
+ES11	    2020	        BigInt, Optional Chaining (?.), Nullish Coalescing (??).
+ES12	    2021	        String.replaceAll(), Logical Assignment Operators (`&&=,
+ES13	    2022	        Top-Level Await, Object.hasOwn().
+ES14	    2023	        findLast(), findLastIndex(), Set methods (set.union()).

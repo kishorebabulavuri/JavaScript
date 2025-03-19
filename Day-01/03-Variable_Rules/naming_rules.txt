@@ -1,0 +1,100 @@
+1. Use Meaningful Names
+
+    Do: Choose names that clearly describe the variable’s purpose.
+    Example: let userAge = 25;
+    Don't: Use vague names that don’t convey meaning.
+    Example: let x = 25;
+
+2. Use Camel Case
+    
+    Do: Start with a lowercase letter and capitalize the first letter of each subsequent word.
+    Example: let totalAmount = 100;
+    Don't: Use underscores or spaces.
+    Example: let total_amount = 100; or let total amount = 100;
+
+3. Start with a Letter or Underscore
+    
+    Do: Start variable names with a letter or an underscore.
+    Example: let _count = 10;
+    Don't: Start with a number or special characters.
+    Example: let 1stPlace = "Gold"; or let @score = 10;
+
+4. Avoid Reserved Words
+
+    Do: Avoid using reserved keywords (e.g., function, var).
+    Example: let currentScore = 50;
+    Don't: Use JavaScript reserved words.
+    Example: let function = "example";
+
+5. Use Consistent Naming
+
+    Do: Maintain a consistent naming convention throughout your code.
+    Example: let userName = "Alice"; and let userEmail = "alice@example.com";
+    Don't: Mix different naming styles.
+    Example: let userName = "Alice"; and let User_Email = "alice@example.com";
+
+6. Avoid Single Letters Except for Counters
+    Do: Use descriptive names for variables, except for loop counters.
+    Example: let index = 0; (for loop counters) and let totalPrice = 150;
+    Don't: Use single letters for general variables.
+    Example: let a = 10; (unless in a loop like for (let i = 0; i < 10; i++))
+
+7. Be Descriptive with Boolean Variables
+    
+    Do: Use names that imply true/false values.
+    Example: let isLoggedIn = true;
+    Don't: Use ambiguous names.
+    Example: let status = true;
+
+8. Avoid Special Characters
+    
+    Do: Stick to letters, numbers, and underscores.
+    Example: let user_address = "123 Main St";
+    Don't: Use characters like @, $, or !.
+    Example: let user@address = "123 Main St";
+
+9. Keep It Short But Clear
+
+    Do: Use concise names that are still descriptive.
+    Example: let cartItems = [];
+    Don't: Use overly long names.
+    Example: let theListOfItemsInTheShoppingCart = [];
+
+----------------------- SAMPLE CODES -------------------
+
+// Good practices in variable naming
+
+// Variable for storing user age
+let userAge = 25;
+
+// Variable for total amount of a purchase
+let totalAmount = 100.50;
+
+// Boolean indicating if the user is logged in
+let isLoggedIn = true;
+
+// Counter for a loop
+for (let index = 0; index < 10; index++) {
+    console.log(index);
+}
+
+// Array to store the names of users
+let userNames = ["Alice", "Bob", "Charlie"];
+
+// Function to calculate total price with tax
+function calculateTotalPrice(price, taxRate) {
+    let totalPrice = price + (price * taxRate);
+    return totalPrice;
+}
+
+// Example usage
+let price = 50;
+let taxRate = 0.07; // 7% tax
+let finalPrice = calculateTotalPrice(price, taxRate);
+
+console.log("Final price including tax: $" + finalPrice);
+
+
+for more in deep 
+
+https://medium.com/@kishore_lavuri/best-practices-for-naming-variables-in-javascript-b9fe9cb3c0c7

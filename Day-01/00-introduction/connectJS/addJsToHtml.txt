@@ -1,0 +1,50 @@
+1️⃣ Inline JavaScript (Inside an HTML tag)
+You can use the onclick, onmouseover, onload, etc., attributes to run JavaScript directly inside an HTML tag.
+
+<button onclick="alert('Hello, World!')">Click Me</button>
+
+2️⃣ Internal JavaScript (Inside <script> tag in the same HTML file)
+You can place JavaScript inside the <script> tag, usually in the <head> or before the closing </body> tag.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript Example</title>
+    <script>
+        function greet() {
+            alert("Hello, World!");
+        }
+    </script>
+</head>
+<body>
+    <button onclick="greet()">Click Me</button>
+</body>
+</html>
+
+
+3️⃣ External JavaScript (Using an external .js file)
+You can create a separate JavaScript file (script.js) and link it using the <script> tag with the src attribute.
+
+Step 1: Create a script.js file
+
+    function greet() {
+    alert("Hello, World!");
+}
+
+Step 2: Link it in the HTML file
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript Example</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <button onclick="greet()">Click Me</button>
+</body>
+</html>
+
+🔥 Best Practice:
+Use external JavaScript for cleaner code and better performance.
+
+Use defer in the <script> tag to load the script after the HTML is fully parsed.

@@ -1,0 +1,11 @@
+What is ECMA?
+ECMA (European Computer Manufacturers Association) is an international standards organization that develops and maintains various technology standards, including ECMAScript (ES), which is the standardized version of JavaScript.
+
+Key Points About ECMA:
+🔹 Founded: 1961
+🔹 Purpose: Standardizing computing and communication systems.
+🔹 ECMAScript (ES): The official specification for JavaScript, maintained by ECMA International (Technical Committee TC39).
+🔹 Other Standards: ECMA also works on standards for C#, Dart, and file formats like JSON.
+
+Why is ECMAScript Important?
+ECMAScript defines the core functionality of JavaScript, ensuring that JavaScript runs consistently across different browsers and environments.
