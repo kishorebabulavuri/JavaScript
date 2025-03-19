@@ -1,0 +1,68 @@
+
+The main types of JavaScript operators include:
+
+
+Arithmetic Operators
+Assignment Operators
+Comparison Operators
+Logical Operators
+Bitwise Operators
+
+
+1. Arithmetic Operators
+Used to perform mathematical operations.
+
+Operator	Description	            Example
++	        Addition	            5 + 2 = 7
+-	        Subtraction	            5 - 2 = 3
+*	        Multiplication	        5 * 2 = 10
+/	        Division	            5 / 2 = 2.5
+%	        Modulus (Remainder) 	5 % 2 = 1
+++	        Increment	            let x = 5; x++; (x becomes 6)
+--	        Decrement	            let y = 5; y--; (y becomes 4)
+
+
+2. Assignment Operators
+Used to assign values to variables.
+
+Operator	    Description	            Example
+=	            Assign value	        x = 10
++=	            Add & assign	        x += 5 (x = x + 5)
+-=	            Subtract & assign	    x -= 5 (x = x - 5)
+*=	            Multiply & assign	    x *= 5 (x = x * 5)
+/=	            Divide & assign	        x /= 5 (x = x / 5)
+%=	            Modulus & assign	    x %= 5 (x = x % 5)
+
+3. Comparison Operators
+Used to compare values.
+
+Operator	Description	                        Example
+==	        Equal to	                        5 == "5" (true)
+===	        Strict equal (value & type)     	5 === "5" (false)
+!=	        Not equal	                        5 != "6" (true)
+!==	        Strict not equal	                5 !== "5" (true)
+>	        Greater than	                    10 > 5 (true)
+<	        Less than	                        10 < 5 (false)
+>=	        Greater than or equal to	        10 >= 10 (true)
+<=	        Less than or equal to	            10 <= 5 (false)
+
+
+4. Logical Operators
+Used for logical operations.
+
+Operator	Description	        Example
+&&	        Logical AND	        (5 > 2 && 10 > 5) => true
+`		                        `
+!	        Logical NOT	        !(5 > 10) => true
+
+5. Bitwise Operators
+Used for binary operations.
+
+Operator	    Description	            Example
+&	            AND	                    5 & 1 = 1
+`	            `	                    OR
+^	            XOR	                    5 ^ 1 = 4
+~	            NOT	                    ~5 = -6
+<<	            Left shift	            5 << 1 = 10
+>>	            Right shift	            5 >> 1 = 2
+
