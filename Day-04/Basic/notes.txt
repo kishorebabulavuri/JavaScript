@@ -1,0 +1,589 @@
+push() – Add Elements to the End of an Array
+The push() method adds one or more elements to the end of an array and returns the new length of the array.
+
+🔹 Syntax:
+array.push(element1, element2, ...);
+Modifies the original array (mutates it).
+Returns the new length of the array.
+
+
+🔸 Example 1: Adding One Element
+
+let fruits = ['apple', 'banana'];
+fruits.push('cherry');
+
+console.log(fruits);  // ['apple', 'banana', 'cherry']
+console.log(fruits.length);  // 3
+
+
+🔸 Example 2: Adding Multiple Elements
+
+let numbers = [1, 2, 3];
+let newLength = numbers.push(4, 5, 6);
+
+console.log(numbers);  // [1, 2, 3, 4, 5, 6]
+console.log(newLength);  // 6
+🔸 Example 3: Using push() with an Empty Array
+
+let arr = [];
+arr.push('first');
+console.log(arr);  // ['first']
+🔸 Example 4: push() with Objects
+
+let students = [{ name: 'Alice' }, { name: 'Bob' }];
+students.push({ name: 'Charlie' });
+
+console.log(students);
+// [{ name: 'Alice' }, { name: 'Bob' }, { name: 'Charlie' }]
+🔸 Example 5: Using push() in a Loop
+
+let numbers = [];
+for (let i = 1; i <= 5; i++) {
+    numbers.push(i);
+}
+console.log(numbers);  // [1, 2, 3, 4, 5]
+
+🔸 Alternative: Using Spread Operator (...)
+Instead of push(), you can use spread syntax (...) to add elements:
+
+let arr = [1, 2, 3];
+arr = [...arr, 4, 5]; // Similar to push()
+console.log(arr);  // [1, 2, 3, 4, 5]
+
+🔹 Summary
+Method	Action	                    Mutates Original Array?	        Returns
+push()	Adds elements at the end	✅ Yes	                      🔢 New array length
+
+
+=================================================================================================
+
+pop() – Remove the Last Element from an Array
+The pop() method removes the last element from an array and returns it.
+If the array is empty, it returns undefined.
+
+🔹 Syntax:
+array.pop();
+Modifies the original array (mutates it).
+Returns the removed element (or undefined if the array is empty).
+🔸 Example 1: Removing the Last Element
+
+let fruits = ['apple', 'banana', 'cherry'];
+let removed = fruits.pop();
+
+console.log(fruits);  // ['apple', 'banana']
+console.log(removed); // 'cherry'
+
+
+🔸 Example 2: Using pop() on an Empty Array
+
+let emptyArr = [];
+console.log(emptyArr.pop());  // undefined
+
+
+🔸 Example 3: pop() in a Loop (Clearing an Array)
+
+let numbers = [1, 2, 3, 4, 5];
+
+while (numbers.length > 0) {
+    console.log(numbers.pop());  // Removes elements one by one
+}
+console.log(numbers);  // []
+
+
+🔸 Example 4: pop() with Objects
+
+let students = [{ name: 'Alice' }, { name: 'Bob' }, { name: 'Charlie' }];
+let removedStudent = students.pop();
+
+console.log(students);  
+// [{ name: 'Alice' }, { name: 'Bob' }]
+
+console.log(removedStudent);  
+// { name: 'Charlie' }
+🔸 Alternative: Using slice() (Non-Mutating)
+
+If you want a non-mutating way to remove the last element:
+
+let arr = [1, 2, 3, 4, 5];
+let newArr = arr.slice(0, -1);  // Removes last element without modifying the original
+
+console.log(newArr);  // [1, 2, 3, 4]
+console.log(arr);     // [1, 2, 3, 4, 5] (original remains unchanged)
+
+
+🔹 Summary
+Method	Action	                    Mutates Original Array?	            Returns
+pop()	Removes the last element	✅ Yes	                           🔢 Removed element
+
+====================================================================================================
+
+unshift() – Add Elements to the Beginning of an Array
+The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
+
+🔹 Syntax:
+
+array.unshift(element1, element2, ...);
+Modifies the original array (mutates it).
+Returns the new length of the array.
+
+🔸 Example 1: Adding One Element
+
+let fruits = ['banana', 'cherry'];
+fruits.unshift('apple');
+
+console.log(fruits);  // ['apple', 'banana', 'cherry']
+console.log(fruits.length);  // 3
+
+
+🔸 Example 2: Adding Multiple Elements
+
+let numbers = [3, 4, 5];
+let newLength = numbers.unshift(1, 2);
+
+console.log(numbers);  // [1, 2, 3, 4, 5]
+console.log(newLength);  // 5
+
+
+🔸 Example 3: Using unshift() on an Empty Array
+
+let arr = [];
+arr.unshift('first');
+console.log(arr);  // ['first']
+
+
+🔸 Example 4: unshift() with Objects
+
+let students = [{ name: 'Bob' }, { name: 'Charlie' }];
+students.unshift({ name: 'Alice' });
+
+console.log(students);
+// [{ name: 'Alice' }, { name: 'Bob' }, { name: 'Charlie' }]
+
+
+🔸 Performance Note
+🚀 unshift() is slower than push(), especially on large arrays, because it re-indexes all elements after inserting at the beginning.
+
+
+🔹 Alternative: Using Spread Operator (...)
+Instead of unshift(), you can use spread syntax (...) to add elements:
+
+let arr = [3, 4, 5];
+arr = [1, 2, ...arr]; // Similar to unshift()
+console.log(arr);  // [1, 2, 3, 4, 5]
+
+
+🔹 Summary
+Method	            Action	                    Mutates Original Array?	        Returns
+unshift()	        Adds elements at the start	✅ Yes	                      🔢 New array length
+
+=========================================================================================
+
+shift() – Remove the First Element from an Array
+The shift() method removes the first element from an array and returns it.
+If the array is empty, it returns undefined.
+
+🔹 Syntax:
+array.shift();
+
+Modifies the original array (mutates it).
+Returns the removed element (or undefined if the array is empty).
+
+
+🔸 Example 1: Removing the First Element
+
+let fruits = ['apple', 'banana', 'cherry'];
+let removed = fruits.shift();
+
+console.log(fruits);  // ['banana', 'cherry']
+console.log(removed); // 'apple'
+
+
+🔸 Example 2: Using shift() on an Empty Array
+
+let emptyArr = [];
+console.log(emptyArr.shift());  // undefined
+
+
+🔸 Example 3: shift() in a Loop (Clearing an Array)
+
+let numbers = [1, 2, 3, 4, 5];
+
+while (numbers.length > 0) {
+    console.log(numbers.shift());  // Removes elements one by one
+}
+console.log(numbers);  // []
+
+
+🔸 Example 4: shift() with Objects
+
+let students = [{ name: 'Alice' }, { name: 'Bob' }, { name: 'Charlie' }];
+let removedStudent = students.shift();
+
+console.log(students);  
+// [{ name: 'Bob' }, { name: 'Charlie' }]
+
+console.log(removedStudent);  
+// { name: 'Alice' }
+
+
+
+🔸 Performance Note
+🚀 shift() is slower than pop(), especially on large arrays, because it re-indexes all elements after removing the first one.
+
+🔹 Alternative: Using slice() (Non-Mutating)
+If you want a non-mutating way to remove the first element:
+
+let arr = [1, 2, 3, 4, 5];
+let newArr = arr.slice(1);  // Removes first element without modifying the original
+
+console.log(newArr);  // [2, 3, 4, 5]
+console.log(arr);     // [1, 2, 3, 4, 5] (original remains unchanged)
+
+
+🔹 Summary
+Method	    Action	                    Mutates Original Array?	        Returns
+shift()	    Removes the first element	✅ Yes	                       🔢 Removed element
+🚀 Use shift() when you need to remove the first element efficiently! 🚀
+
+=====================================================================================================
+
+length – Get the Size of an Array
+The length property returns the number of elements in an array.
+It is not a method, but a property of the array object.
+
+🔹 Syntax:
+
+array.length;
+Returns the total count of elements in the array.
+Can be used to modify the array size.
+
+
+🔸 Example 1: Getting Array Length
+
+let fruits = ['apple', 'banana', 'cherry'];
+console.log(fruits.length);  // 3
+
+
+🔸 Example 2: Using length in a Loop
+
+let numbers = [10, 20, 30, 40, 50];
+
+for (let i = 0; i < numbers.length; i++) {
+    console.log(numbers[i]);
+}
+   Output:
+    10
+    20
+    30
+    40
+    50
+
+🔸 Example 3: Setting length to Truncate an Array
+You can reduce the size of an array by setting length manually:
+
+let arr = [1, 2, 3, 4, 5];
+arr.length = 3;
+
+console.log(arr);  // [1, 2, 3]
+
+
+🔸 Example 4: Setting length = 0 to Empty an Array
+
+let arr = [1, 2, 3, 4, 5];
+arr.length = 0;
+
+console.log(arr);  // []
+
+
+🔸 Example 5: Using length for Dynamic Push
+
+let items = ['a', 'b'];
+items[items.length] = 'c';  // Same as push()
+
+console.log(items);  // ['a', 'b', 'c']
+
+
+🔹 Summary
+Property	    Action	                    Modifiable?	        Returns
+length	        Gets or sets array size	    ✅ Yes	          🔢 Number of elements
+
+=================================================================================================
+
+indexOf() – Find the Index of an Element in an Array
+The indexOf() method returns the index of the first occurrence of a specified element in an array.
+If the element is not found, it returns -1.
+
+🔹 Syntax:
+
+✔️ array.indexOf(element, startIndex);
+
+element: The value to search for in the array.
+startIndex (optional): The position from where the search should begin (default is 0).
+Returns the index of the first occurrence of the element, or -1 if not found.
+
+🔸 Example 1: Finding an Element's Index
+
+let fruits = ['apple', 'banana', 'cherry', 'banana'];
+
+console.log(fruits.indexOf('banana'));  // 1 (first occurrence)
+console.log(fruits.indexOf('cherry'));  // 2
+console.log(fruits.indexOf('grape'));   // -1 (not found)
+
+
+🔸 Example 2: Using indexOf() with a Start Index
+
+let colors = ['red', 'blue', 'green', 'blue'];
+
+console.log(colors.indexOf('blue', 2));  // 3 (starts search from index 2)
+console.log(colors.indexOf('red', 1));   // -1 (search starts after 'red')
+
+🔸 Example 3: Checking if an Element Exists
+🚨 If indexOf() returns -1, the element is not in the array.
+
+let numbers = [10, 20, 30, 40];
+
+if (numbers.indexOf(20) !== -1) {
+    console.log('20 is in the array');
+} else {
+    console.log('20 is not in the array');
+}
+// Output: 20 is in the array
+
+
+🔸 Example 4: Using indexOf() to Remove an Element
+
+let items = ['pen', 'pencil', 'eraser'];
+let removeItem = 'pencil';
+
+let index = items.indexOf(removeItem);
+if (index !== -1) {
+    items.splice(index, 1);  // Removes 'pencil'
+}
+
+console.log(items);  // ['pen', 'eraser']
+
+
+🔸 Example 5: Case Sensitivity in indexOf()
+🚨 Case matters!
+
+let names = ['Alice', 'Bob', 'Charlie'];
+
+console.log(names.indexOf('alice'));  // -1 (case-sensitive)
+console.log(names.indexOf('Alice'));  // 0
+
+
+🔸 Alternative: Using includes()
+For a simpler check:
+
+let arr = [1, 2, 3, 4];
+
+console.log(arr.includes(3));  // true
+console.log(arr.includes(5));  // false
+However, indexOf() is useful when you need the position of an element.
+
+🔹 Summary
+Method	    Action	                                Returns	            Case-Sensitive?
+indexOf()	Finds first occurrence of an element	🔢 Index or -1	    ✅ Yes
+
+============================================================================================
+
+includes() – Check if an Element Exists in an Array
+The includes() method checks if an array contains a specific element and returns true or false.
+
+🔹 Syntax:
+
+array.includes(element, startIndex);
+element: The value to search for in the array.
+startIndex (optional): The position from where the search should begin (default is 0).
+Returns true if the element is found, otherwise false.
+
+🔸 Example 1: Checking for an Element
+
+let fruits = ['apple', 'banana', 'cherry'];
+
+console.log(fruits.includes('banana'));  // true
+console.log(fruits.includes('grape'));   // false
+
+🔸 Example 2: Using includes() with Numbers
+
+let numbers = [10, 20, 30, 40];
+
+console.log(numbers.includes(20));  // true
+console.log(numbers.includes(50));  // false
+
+
+🔸 Example 3: Using includes() with a Start Index
+
+let colors = ['red', 'blue', 'green', 'blue'];
+
+console.log(colors.includes('blue', 2));  // true (checks from index 2)
+console.log(colors.includes('red', 1));   // false (search starts from index 1)
+
+🔸 Example 4: includes() with if Condition
+
+let items = ['pen', 'pencil', 'eraser'];
+
+if (items.includes('pencil')) {
+    console.log('Pencil is available');
+} else {
+    console.log('Pencil is not available');
+}
+// Output: Pencil is available
+
+
+🔸 Example 5: Using includes() for Case Sensitivity
+🚨 Case matters!
+
+let names = ['Alice', 'Bob', 'Charlie'];
+
+console.log(names.includes('alice'));  // false (case-sensitive)
+console.log(names.includes('Alice'));  // true
+
+
+🔸 Alternative: Using indexOf()
+The indexOf() method can also check if an element exists:
+
+let arr = [1, 2, 3, 4];
+
+console.log(arr.indexOf(3) !== -1);  // true (element exists)
+console.log(arr.indexOf(5) !== -1);  // false (element not found)
+However, includes() is more readable than indexOf().
+
+🔹 Summary
+Method	    Action	                        Returns	                    Case-Sensitive?
+includes()	Checks if an element exists	    ✅ true / ❌ false	    ✅ Yes
+
+========================================================================================
+
+at() – Access Elements Using Positive or Negative Indexes
+
+The at() method returns an element from an array at a specified index.
+Unlike array[index], it supports negative indexes to count from the end.
+
+🔹 Syntax:
+
+        array.at(index);
+
+index: The position of the element (can be positive or negative).
+Returns the element at the given index.
+If the index is out of bounds, it returns undefined.
+
+
+🔸 Example 1: Accessing Elements with at()
+
+let fruits = ['apple', 'banana', 'cherry'];
+
+console.log(fruits.at(0));  // 'apple' (first element)
+console.log(fruits.at(2));  // 'cherry' (third element)
+console.log(fruits.at(-1)); // 'cherry' (last element)
+console.log(fruits.at(-2)); // 'banana' (second-last element)
+console.log(fruits.at(5));  // undefined (index out of range)
+
+
+🔸 Example 2: Difference Between at() and []
+
+let numbers = [10, 20, 30];
+
+console.log(numbers[0]);    // 10 (same as at(0))
+console.log(numbers.at(-1)); // 30 (easier than numbers[numbers.length - 1])
+🔹 at(-1) is cleaner than numbers[numbers.length - 1].
+
+🔸 Example 3: Using at() in a Loop
+
+let letters = ['a', 'b', 'c', 'd'];
+
+for (let i = -1; i >= -letters.length; i--) {
+    console.log(letters.at(i));  
+}
+// Output:
+// d
+// c
+// b
+// a
+
+
+🔸 Example 4: Checking for Out-of-Bounds Indexes
+
+let items = ['pen', 'pencil', 'eraser'];
+
+console.log(items.at(5));  // undefined
+console.log(items.at(-4)); // undefined
+
+
+
+🔹 When to Use at() Instead of []
+Feature	                    at(index)	                            array[index]
+Positive Index	            ✅ Yes	                                ✅ Yes
+Negative Index	            ✅ Yes	                                ❌ No (needs array.length - index)
+Readability	                ✅ Cleaner for last elements	            ❌ Requires extra logic
+🚀 Use at() for better readability when working with negative indexes! 🚀
+
+=================================================================================
+
+array[index] – Access Elements by Index
+
+You can access elements in an array using square brackets ([]) with an index number.
+The index starts from 0 (zero-based indexing).
+
+🔹 Syntax:
+
+        array[index];
+
+index: The position of the element (starts from 0).
+Returns the element at the given index.
+If the index is out of bounds, it returns undefined.
+
+
+🔸 Example 1: Accessing Elements
+
+let fruits = ['apple', 'banana', 'cherry'];
+
+console.log(fruits[0]);  // 'apple' (first element)
+console.log(fruits[1]);  // 'banana' (second element)
+console.log(fruits[2]);  // 'cherry' (third element)
+console.log(fruits[3]);  // undefined (index out of range)
+
+
+🔸 Example 2: Modifying Elements Using array[index]
+
+let numbers = [10, 20, 30];
+
+numbers[1] = 25;  // Modify second element
+
+console.log(numbers);  // [10, 25, 30]
+
+
+🔸 Example 3: Accessing the Last Element
+
+let colors = ['red', 'blue', 'green'];
+
+console.log(colors[colors.length - 1]);  // 'green'
+🚨 Using colors.length - 1 is required for the last element because [] does not support negative indexes.
+
+🔸 Example 4: Using array[index] in a Loop
+
+let letters = ['a', 'b', 'c', 'd'];
+
+for (let i = 0; i < letters.length; i++) {
+    console.log(letters[i]);  
+}
+// Output:
+// a
+// b
+// c
+// d
+
+
+🔸 Example 5: Checking for Undefined Index
+
+let items = ['pen', 'pencil', 'eraser'];
+
+console.log(items[10]);  // undefined (index out of range)
+
+
+🔹 Difference Between array[index] and at(index)
+
+Feature	            array[index]	array.at(index)
+Positive Index	    ✅ Yes	        ✅ Yes
+Negative Index	    ❌ No	        ✅ Yes
+Readability	        ✅ Standard	    ✅ Better for negative indexes
